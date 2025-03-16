@@ -1,0 +1,118 @@
+/* Corpo della pagina */
+body {
+    font-family: 'Poppins', sans-serif; /* Font moderno e pulito */
+    line-height: 1.6;
+    font-size: 16px; /* Impostato il font size a 16px per una lettura migliore */
+    background-color:  #f0f8ff; /* Azzurro molto chiaro per maggiore luminosità */
+    color: #333333; /* Testo grigio scuro per contrasto migliore */
+}
+
+/* Titolo */
+h1 {
+    color: #1e90ff; /* Azzurro cielo per un look moderno */
+    font-size: 3.5em; /* Dimensione del font più grande per il titolo */
+    text-align: center; /* Allineamento centrale */
+    margin: 40px 0 20px 0;
+    font-weight: 600; /* Font in grassetto per il titolo */
+    letter-spacing: 1px; /* Distanza tra le lettere per un effetto più stiloso */
+}
+
+/* Sottotitolo h3 */
+h3 {
+    text-align: left; /* Allinea il testo a sinistra */
+    color: #1e90ff; /* Verde acqua tenue per contrasto elegante */
+    font-size: 1.8em; /* Dimensione del font leggermente più grande rispetto al normale testo */
+    font-weight: 500; /* Font più snodato per i sottotitoli */
+    margin-bottom: 15px;
+}
+
+/* Stile per div e p */
+div, p {
+    text-align: left; /* Allineamento a sinistra */
+    margin-bottom: 20px; /* Distanza tra i paragrafi */
+    font-size: 1.1em;
+    color: #333333; /* Testo grigio scuro per il corpo del testo */
+}
+
+/* Stili per la galleria */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra la galleria */
+    gap: 20px; /* Distanza tra le immagini */
+    padding: 30px 0; /* Padding superiore e inferiore per la galleria */
+}
+
+/* Immagini nella galleria */
+.gallery img {
+    display: inline-block; /* Mostra le immagini in linea */
+    width: 350px; /* Larghezza uniforme per le immagini */
+    height: 200px; /* Altezza uniforme */
+    margin: 10px; /* Distanza tra le immagini */
+    border-radius: 12px; /* Bordi arrotondati per un aspetto più morbido */
+    box-shadow: 1px 1px 20px rgb(23, 134, 203); /* Ombra con effetto azzurro cielo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Aggiungi transizione per ingrandimento e ombra */
+    cursor: pointer; /* Aggiunge il cursore a mano */
+    object-fit: cover; /* Adatta l'immagine mantenendo le proporzioni */
+}
+
+/* Effetto hover per l'immagine */
+.gallery img:hover {
+    transform: scale(1.5); /* Effetto zoom al passaggio del mouse */
+    box-shadow: 1px 1px 20px rgb(23, 134, 203); /* Ombra più accentuata con effetto azzurro cielo */
+}
+
+/* Aggiunta di un'animazione al clic sulle immagini */
+.gallery img:active {
+    transform: scale(3.1); /* Effetto di riduzione quando si fa clic */
+}
+
+/* Media Queries */
+
+/* Per telefoni (320px e superiori) */
+@media only screen and (min-width: 320px) {
+    body {
+        font-size: 14px; /* Riduce il font per schermi più piccoli */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Riduce la dimensione del titolo */
+    }
+
+    .gallery img {
+        width: 100%; /* Immagini più larghe su schermi piccoli */
+        height: auto; /* Mantiene le proporzioni delle immagini */
+    }
+}
+
+/* Per tablet (768px e superiori) */
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 3em; /* Titolo leggermente più piccolo su tablet */
+    }
+
+    .gallery img {
+        width: 45%; /* Immagini di dimensioni medie per tablet */
+        height: auto; /* Mantiene le proporzioni delle immagini */
+    }
+}
+
+/* Per desktop (980px e superiori) */
+@media only screen and (min-width: 980px) {
+    h1 {
+        font-size: 3.5em; /* Dimensione del titolo come quella originale */
+    }
+
+    .gallery img {
+        width: 350px; /* Larghezza costante per le immagini su desktop */
+        height: 200px; /* Altezza costante */
+    }
+}
+
+/* Per grandi desktop (1280px e superiori) */
+@media only screen and (min-width: 1280px) {
+    .gallery img {
+        width: 400px; /* Immagini leggermente più grandi su schermi molto grandi */
+        height: 220px; /* Altezza maggiore per schermi grandi */
+    }
+}
